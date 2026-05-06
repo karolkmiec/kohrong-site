@@ -1,0 +1,36 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.kohrong.co" }],
+      "destination": "https://kohrong.co/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "kohrong24.com" }],
+      "destination": "https://kohrong.co/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "kohrongtravel.com" }],
+      "destination": "https://kohrong.co/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "kohrong.fun" }],
+      "destination": "https://kohrong.co/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "kohrong.vip" }],
+      "destination": "https://kohrong.co/:path*",
+      "permanent": true
+    }
+  ]
+}

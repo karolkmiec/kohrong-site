@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "welcome-to-koh-rong",
+    "title": "Welcome to Koh Rong: What to See First",
+    "excerpt": "A quick guide for new visitors: beaches, sunset spots, and practical tips.",
+    "body": "Start with Long Set Beach for calm waters, then explore local food near the main pier. In the evening, join a sunset boat or beach dinner. Plan transfers in advance during high season.",
+    "eventDate": "2026-05-10",
+    "createdAt": "2026-05-06",
+    "tags": ["guide", "travel", "koh-rong"]
+  },
+  {
+    "slug": "golden-sun-villa-season-offer",
+    "title": "Golden Sun Villa Seasonal Offer",
+    "excerpt": "Special package for group bookings this month.",
+    "body": "Golden Sun Villa now offers discounted rates for longer stays and group bookings. Contact us to receive your custom quote and airport-to-island transfer options.",
+    "eventDate": "2026-05-20",
+    "createdAt": "2026-05-06",
+    "tags": ["villa", "offer"]
+  }
+]

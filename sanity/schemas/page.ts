@@ -1,0 +1,18 @@
+export default {
+  name: "page",
+  title: "Page",
+  type: "document",
+  fields: [
+    { name: "title", title: "Title", type: "string" },
+    { name: "slug", title: "Slug", type: "slug", options: { source: "title", maxLength: 96 } },
+    { name: "body", title: "Body", type: "text" },
+    {
+      name: "status",
+      title: "Status",
+      type: "string",
+      options: {
+        list: ["draft", "ready_for_review", "approved", "published"]
+      }
+    }
+  ]
+};
