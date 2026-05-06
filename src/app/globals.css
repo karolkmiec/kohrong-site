@@ -30,6 +30,19 @@ a {
   padding: 32px;
 }
 
+.hero-image-wrap {
+  margin-top: 18px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.25);
+}
+
 .card {
   background: white;
   border-radius: 14px;
@@ -42,8 +55,34 @@ a {
   gap: 16px;
 }
 
+.villa-gallery {
+  display: grid;
+  gap: 14px;
+}
+
+.villa-gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.villa-gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.villa-gallery-item:hover .villa-gallery-image {
+  transform: scale(1.02);
+}
+
 @media (min-width: 900px) {
   .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .villa-gallery {
     grid-template-columns: 1fr 1fr;
   }
 }

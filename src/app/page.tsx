@@ -1,7 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { newsItems, siteContent } from "@/lib/content";
 
 export default function HomePage() {
+  const villaImages = [
+    "/images/villa/villa-1.jpg",
+    "/images/villa/villa-2.jpg",
+    "/images/villa/villa-3.jpg",
+    "/images/villa/villa-4.jpg",
+    "/images/villa/villa-5.jpg"
+  ];
   const latestNews = [...newsItems]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .slice(0, 3);
@@ -19,6 +27,16 @@ export default function HomePage() {
       <section className="hero">
         <h1>{siteContent.hero.title}</h1>
         <p>{siteContent.hero.subtitle}</p>
+        <div className="hero-image-wrap">
+          <Image
+            src={villaImages[0]}
+            alt="Golden Sun Villa exterior with private pool"
+            width={1200}
+            height={675}
+            className="hero-image"
+            priority
+          />
+        </div>
       </section>
 
       <section className="grid grid-2">
@@ -33,6 +51,23 @@ export default function HomePage() {
             Contact: <a href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
           </p>
         </article>
+      </section>
+
+      <section className="card">
+        <h2>Golden Sun Villa Gallery</h2>
+        <div className="villa-gallery">
+          {villaImages.map((src, index) => (
+            <div key={src} className="villa-gallery-item">
+              <Image
+                src={src}
+                alt={`Golden Sun Villa photo ${index + 1}`}
+                width={1200}
+                height={800}
+                className="villa-gallery-image"
+              />
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="card">
