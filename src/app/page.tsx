@@ -13,6 +13,7 @@ export default function HomePage() {
   const latestNews = [...newsItems]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .slice(0, 3);
+  const whatsappHref = `https://wa.me/${siteContent.contact.whatsapp.replace(/\D/g, "")}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
@@ -25,8 +26,17 @@ export default function HomePage() {
   return (
     <main className="container grid" style={{ gap: 20 }}>
       <section className="hero">
+        <span className="kicker">Koh Rong Island Escape</span>
         <h1>{siteContent.hero.title}</h1>
         <p>{siteContent.hero.subtitle}</p>
+        <div className="hero-actions">
+          <a className="btn btn-primary" href={whatsappHref} target="_blank" rel="noreferrer">
+            Book via WhatsApp
+          </a>
+          <a className="btn btn-secondary" href={`mailto:${siteContent.contact.email}`}>
+            Email Concierge
+          </a>
+        </div>
         <div className="hero-image-wrap">
           <Image
             src={villaImages[0]}
@@ -41,10 +51,12 @@ export default function HomePage() {
 
       <section className="grid grid-2">
         <article className="card">
+          <span className="kicker">Island Guide</span>
           <h2>About Koh Rong</h2>
           <p>{siteContent.aboutIsland}</p>
         </article>
         <article className="card">
+          <span className="kicker">Private Stay</span>
           <h2>Golden Sun Villa</h2>
           <p>{siteContent.aboutVilla}</p>
           <p>
@@ -54,6 +66,7 @@ export default function HomePage() {
       </section>
 
       <section className="card">
+        <span className="kicker">Photo Story</span>
         <h2>Golden Sun Villa Gallery</h2>
         <div className="villa-gallery">
           {villaImages.map((src, index) => (
@@ -71,6 +84,7 @@ export default function HomePage() {
       </section>
 
       <section className="card">
+        <span className="kicker">Villa Atmosphere</span>
         <h2>Golden Sun Villa Video</h2>
         <p>Take a quick look at the villa atmosphere before your trip.</p>
         <div className="villa-video-wrap">
@@ -86,18 +100,25 @@ export default function HomePage() {
       </section>
 
       <section className="card">
+        <span className="kicker">On The Island</span>
         <h2>Latest News & Events</h2>
-        <div className="grid">
+        <div className="news-list">
           {latestNews.map((item) => (
-            <article key={item.slug}>
+            <article key={item.slug} className="news-card">
               <h3>
                 <Link href={`/news/${item.slug}`}>{item.title}</Link>
               </h3>
               <p>{item.excerpt}</p>
-              <small>Event date: {item.eventDate}</small>
+              <div className="news-meta">
+                <span>Event date: {item.eventDate}</span>
+                <span>{item.tags.slice(0, 2).join(" · ")}</span>
+              </div>
             </article>
           ))}
         </div>
+        <p style={{ marginTop: 14 }}>
+          <Link href="/news">See all news and events</Link>
+        </p>
       </section>
       <script
         type="application/ld+json"

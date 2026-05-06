@@ -17,6 +17,10 @@
 ## Done in this phase
 - Added villa hero image and "Golden Sun Villa Gallery" to homepage.
 - Added embedded YouTube villa video section on homepage.
+- Implemented full template-based "premium beach resort" redesign across site-wide layout.
+- Added shared shell with sticky header navigation and premium footer.
+- Added design tokens and new visual system in global styles (palette, spacing, cards, buttons, typography).
+- Redesigned news listing and single-news pages for consistent card/article presentation.
 - Added villa images in `public/images/villa/`.
 - Removed failing GitHub workflow file `.github/workflows/deploy.yml` to stop CI failure emails.
 - Added test news entry:
@@ -25,17 +29,21 @@
 
 ## Current expected content state
 - Homepage includes:
-  - hero with villa image,
+  - hero with villa image and booking CTAs,
   - villa gallery section,
-  - embedded YouTube villa video.
-- News page includes latest Kerfuffle test event post.
+  - embedded YouTube villa video,
+  - refreshed premium layout system matching resort vibe.
+- News listing and single news page now use redesigned template style.
+- News includes latest Kerfuffle test event post.
 
 ## NEXT (continue from here)
-1. Verify test news on production:
+1. Verify redesign visuals on production (desktop + mobile):
+   - homepage, `/news`, and `/news/[slug]`
+2. Verify test news on production:
    - `https://kohrong.co/news/kerfuffle-monday-party-may-11`
-2. Decide whether test news stays or is replaced by final copy.
-3. Optional UX improvement:
-   - add CTA block under villa gallery/video (Book now / WhatsApp / Email).
+3. Decide whether test news stays or is replaced by final copy.
+4. Optional UX improvement:
+   - add trust/review strip and booking CTA module near footer.
 
 ## Quick resume prompt for any new agent
 Use this instruction:
