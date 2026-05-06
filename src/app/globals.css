@@ -77,6 +77,20 @@ a {
   transform: scale(1.02);
 }
 
+.villa-video-wrap {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0b1220;
+}
+
+.villa-video-wrap iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
 @media (min-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr 1fr;

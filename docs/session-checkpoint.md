@@ -16,6 +16,7 @@
 
 ## Done in this phase
 - Added villa hero image and "Golden Sun Villa Gallery" to homepage.
+- Added embedded YouTube villa video section on homepage.
 - Added villa images in `public/images/villa/`.
 - Removed failing GitHub workflow file `.github/workflows/deploy.yml` to stop CI failure emails.
 - Added test news entry:
@@ -25,7 +26,8 @@
 ## Current expected content state
 - Homepage includes:
   - hero with villa image,
-  - villa gallery section.
+  - villa gallery section,
+  - embedded YouTube villa video.
 - News page includes latest Kerfuffle test event post.
 
 ## NEXT (continue from here)
@@ -33,7 +35,7 @@
    - `https://kohrong.co/news/kerfuffle-monday-party-may-11`
 2. Decide whether test news stays or is replaced by final copy.
 3. Optional UX improvement:
-   - add CTA block under villa gallery (Book now / WhatsApp / Email).
+   - add CTA block under villa gallery/video (Book now / WhatsApp / Email).
 
 ## Quick resume prompt for any new agent
 Use this instruction:

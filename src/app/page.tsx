@@ -71,6 +71,21 @@ export default function HomePage() {
       </section>
 
       <section className="card">
+        <h2>Golden Sun Villa Video</h2>
+        <p>Take a quick look at the villa atmosphere before your trip.</p>
+        <div className="villa-video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/E59wAALIFpg"
+            title="Golden Sun Villa video tour"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
+      <section className="card">
         <h2>Latest News & Events</h2>
         <div className="grid">
           {latestNews.map((item) => (
