@@ -17,7 +17,12 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        run: npm install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - name: Lint
         run: npm run lint
       - name: Build
