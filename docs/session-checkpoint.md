@@ -1,5 +1,10 @@
 # Session Checkpoint
 
+## Update protocol
+- Agent updates this file after each major completed change.
+- Each update should include: what changed, touched files, verification, and next step.
+- This file is the single source of truth for resume on another machine.
+
 ## Project
 - Repo: `karolkmiec/kohrong-site`
 - Domain: `https://kohrong.co`

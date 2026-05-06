@@ -50,3 +50,17 @@ Po zakończeniu pracy:
 - Brak lokalnych, niezatwierdzonych zmian na koniec dnia.
 - Każda zmiana wdrożeniowa kończy się push na GitHub.
 - Każda sesja kończy się aktualizacją `docs/session-checkpoint.md`.
+
+## 6) Auto-podsumowanie po każdej większej zmianie
+
+Od tego momentu agent aktualizuje `docs/session-checkpoint.md` automatycznie po każdym istotnym kroku (np. nowy news, zmiana UI, poprawka deploy/CI).
+
+Minimalny wpis aktualizacji obejmuje:
+
+1. Co zostało zmienione (1-3 punkty).
+2. Jakie pliki zostały dotknięte.
+3. Co zostało zweryfikowane (np. build/deploy/URL).
+4. Jaki jest kolejny krok (`NEXT`).
+
+Przykładowy prompt na start sesji:
+- "Kontynuuj pracę i po każdej większej zmianie zaktualizuj `docs/session-checkpoint.md`."
