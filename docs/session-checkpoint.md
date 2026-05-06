@@ -45,6 +45,9 @@
 3. Decide whether test news stays or is replaced by final copy.
 4. Optional UX improvement:
    - add trust/review strip and booking CTA module near footer.
+5. Configure `bookings@kohrong.co` email in GoDaddy:
+   - forwarding to `karol.kmiec@gmail.com`
+   - Gmail "Send as" with sender name "Koh Rong Bookings".
 
 ## Quick resume prompt for any new agent
 Use this instruction:
