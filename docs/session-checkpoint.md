@@ -21,6 +21,7 @@
 - Added shared shell with sticky header navigation and premium footer.
 - Added design tokens and new visual system in global styles (palette, spacing, cards, buttons, typography).
 - Redesigned news listing and single-news pages for consistent card/article presentation.
+- Switched primary contact from WhatsApp to Telegram (nav, CTA, footer, and contact config).
 - Added villa images in `public/images/villa/`.
 - Removed failing GitHub workflow file `.github/workflows/deploy.yml` to stop CI failure emails.
 - Added test news entry:
@@ -29,7 +30,7 @@
 
 ## Current expected content state
 - Homepage includes:
-  - hero with villa image and booking CTAs,
+  - hero with villa image and booking CTAs (Telegram + email),
   - villa gallery section,
   - embedded YouTube villa video,
   - refreshed premium layout system matching resort vibe.
