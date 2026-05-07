@@ -13,15 +13,12 @@ export default function HomePage() {
   const latestNews = [...newsItems]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .slice(0, 3);
-  const telegramNumber = siteContent.contact.telegram.replace(/\D/g, "");
-  const telegramHref = `https://t.me/+${telegramNumber}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     name: "Golden Sun Villa",
     areaServed: "Koh Rong, Cambodia",
-    url: "https://kohrong.co",
-    telephone: siteContent.contact.telegram
+    url: "https://kohrong.co"
   };
 
   return (
@@ -31,10 +28,7 @@ export default function HomePage() {
         <h1>{siteContent.hero.title}</h1>
         <p>{siteContent.hero.subtitle}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href={telegramHref} target="_blank" rel="noreferrer">
-            Book via Telegram
-          </a>
-          <a className="btn btn-secondary" href={`mailto:${siteContent.contact.email}`}>
+          <a className="btn btn-primary" href={`mailto:${siteContent.contact.email}`}>
             Email Concierge
           </a>
         </div>

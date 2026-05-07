@@ -26,8 +26,6 @@ export default function RootLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
   const gaId = process.env.GA_MEASUREMENT_ID;
-  const telegramNumber = siteContent.contact.telegram.replace(/\D/g, "");
-  const telegramHref = `https://t.me/+${telegramNumber}`;
   return (
     <html lang="en">
       <body>
@@ -39,8 +37,8 @@ export default function RootLayout({
             <nav className="main-nav" aria-label="Main navigation">
               <Link href="/">Home</Link>
               <Link href="/news">News</Link>
-              <a href={telegramHref} target="_blank" rel="noreferrer">
-                Telegram
+              <a href={`mailto:${siteContent.contact.email}`}>
+                Contact
               </a>
             </nav>
           </div>
@@ -58,11 +56,6 @@ export default function RootLayout({
               <h4>Contact</h4>
               <p>
                 <a href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
-              </p>
-              <p>
-                <a href={telegramHref} target="_blank" rel="noreferrer">
-                  {siteContent.contact.telegram}
-                </a>
               </p>
             </div>
             <div>
