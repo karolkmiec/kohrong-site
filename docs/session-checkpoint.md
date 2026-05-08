@@ -15,6 +15,18 @@
 - Previous linked chat reference: "Instalacja Git i pierwszy push"
 
 ## Done in this phase
+- Implemented full architecture from implementation brief:
+  - `/villa`, `/gallery`, `/gallery/koh-rong-first-look`, `/gallery/[slug]`, `/book`, `/contact`.
+- Upgraded site-wide conversion flow with sticky header CTA "Check availability" -> `/book`.
+- Added full `/villa` storytelling structure with rates placeholder, location map block, and 14-item FAQ.
+- Added booking inquiry form page (`/book`) with MVP submission endpoint.
+- Added per-page metadata and improved SEO setup for new routes.
+- Added dynamic metadata for `/news/[slug]` and Event JSON-LD per news entry.
+- Added LodgingBusiness JSON-LD for `/villa`.
+- Expanded sitemap coverage for all core pages and gallery collections.
+- Added root `CHANGES.md` with design and implementation decisions log.
+- Updated `/gallery/koh-rong-first-look` to auto-detect and render all uploaded images from folder regardless of filename.
+- Added hand-written curated captions and SEO-friendly alt text set for first 24 gallery images.
 - Added villa hero image and "Golden Sun Villa Gallery" to homepage.
 - Added embedded YouTube villa video section on homepage.
 - Implemented full template-based "premium beach resort" redesign across site-wide layout.
@@ -34,6 +46,12 @@
   - villa gallery section,
   - embedded YouTube villa video,
   - refreshed premium layout system matching resort vibe.
+- New pages are live in code:
+  - `/villa`
+  - `/gallery`
+  - `/gallery/koh-rong-first-look`
+  - `/book`
+  - `/contact`
 - News listing and single news page now use redesigned template style.
 - News includes latest Kerfuffle test event post.
 
@@ -48,6 +66,11 @@
 5. Configure `bookings@kohrong.co` email in GoDaddy:
    - forwarding to `karol.kmiec@gmail.com`
    - Gmail "Send as" with sender name "Koh Rong Bookings".
+6. Upload 20 personal Koh Rong photos to:
+   - `public/images/gallery/koh-rong-first-look/`
+   and then map real files/captions on `/gallery/koh-rong-first-look`.
+7. Optional polish:
+   - replace auto-generated captions with hand-written personal captions for each uploaded photo.
 
 ## Quick resume prompt for any new agent
 Use this instruction:
