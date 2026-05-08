@@ -1,5 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { newsItems } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Koh Rong News & Events - Parties, Happy Hours, Island Life",
+  description: "Upcoming events, parties, and happy hours on Koh Rong island. Updated regularly by Golden Sun Villa."
+};
 
 export default function NewsListPage() {
   const items = [...newsItems].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
@@ -18,7 +24,7 @@ export default function NewsListPage() {
               <p>{item.excerpt}</p>
               <div className="news-meta">
                 <span>Event date: {item.eventDate}</span>
-                <span>{item.tags.join(" · ")}</span>
+                <span>{item.tags.slice(0, 3).join(" · ")}</span>
               </div>
             </article>
           ))}

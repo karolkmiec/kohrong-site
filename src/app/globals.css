@@ -42,6 +42,7 @@ h4 {
   margin-top: 0;
   line-height: 1.25;
   color: var(--text-primary);
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 .site-shell {
@@ -63,7 +64,7 @@ h4 {
   min-height: 72px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
 }
 
@@ -89,6 +90,18 @@ h4 {
   color: var(--bg-ocean);
 }
 
+.header-cta {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #f2c078, var(--accent-gold));
+  color: #2a1f0f;
+  font-weight: 600;
+}
+
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -105,7 +118,7 @@ h4 {
 
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3.1rem);
-  max-width: 14ch;
+  max-width: 18ch;
   color: #fff;
 }
 
@@ -145,6 +158,11 @@ h4 {
 .btn-secondary {
   border: 1px solid rgba(255, 255, 255, 0.42);
   color: #fff;
+}
+
+.card .btn-secondary {
+  border-color: rgba(15, 75, 95, 0.3);
+  color: var(--bg-ocean);
 }
 
 .hero-image-wrap {
@@ -192,6 +210,12 @@ h4 {
 .villa-gallery-item {
   overflow: hidden;
   border-radius: 12px;
+}
+
+.villa-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 10px 2px 2px;
 }
 
 .villa-gallery-image {
@@ -289,6 +313,125 @@ h4 {
   font-size: 0.8rem;
 }
 
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.glance-item {
+  border: 1px solid rgba(15, 75, 95, 0.12);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.info-list {
+  color: var(--text-muted);
+  padding-left: 18px;
+}
+
+.info-list li {
+  margin-bottom: 6px;
+}
+
+.map-wrap {
+  margin-top: 10px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(15, 75, 95, 0.12);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  display: block;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  border: 1px solid rgba(15, 75, 95, 0.12);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-item p {
+  margin-top: 8px;
+}
+
+.cta-panel {
+  border: 1px solid rgba(15, 75, 95, 0.14);
+}
+
+.gallery-collection-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.first-look-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.first-look-item {
+  border: 1px solid rgba(15, 75, 95, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+}
+
+.first-look-item figcaption {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  padding: 8px 10px;
+}
+
+.book-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.book-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.book-form input,
+.book-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 75, 95, 0.2);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list p {
+  margin: 8px 0;
+}
+
 @media (min-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr 1fr;
@@ -300,6 +443,14 @@ h4 {
 
   .footer-grid {
     grid-template-columns: 1.3fr 1fr 1fr;
+  }
+
+  .gallery-collection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

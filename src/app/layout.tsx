@@ -7,18 +7,26 @@ import { siteContent } from "@/lib/content";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kohrong.co"),
   title: {
-    default: "Koh Rong & Golden Sun Villa",
+    default: "Golden Sun Villa - Private Villa Rental on Koh Rong, Cambodia",
     template: "%s | Koh Rong"
   },
   description:
-    "Official guide to Koh Rong island and Golden Sun Villa rentals, with travel tips and local events.",
+    "A private villa retreat on Koh Rong island. Beach lifestyle, island events, and concierge support. Book direct with the owner.",
   openGraph: {
-    title: "Koh Rong & Golden Sun Villa",
+    title: "Golden Sun Villa - Private Villa Rental on Koh Rong, Cambodia",
     description:
-      "Official guide to Koh Rong island and Golden Sun Villa rentals, with travel tips and local events.",
+      "A private villa retreat on Koh Rong island. Beach lifestyle, island events, and concierge support. Book direct with the owner.",
     url: "https://kohrong.co",
-    siteName: "Koh Rong",
-    type: "website"
+    siteName: "Golden Sun Villa",
+    type: "website",
+    images: [
+      {
+        url: "/images/villa/villa-1.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Golden Sun Villa - Koh Rong"
+      }
+    ]
   }
 };
 
@@ -36,11 +44,16 @@ export default function RootLayout({
             </Link>
             <nav className="main-nav" aria-label="Main navigation">
               <Link href="/">Home</Link>
+              <Link href="/villa">The Villa</Link>
+              <Link href="/gallery">Photo Stories</Link>
               <Link href="/news">News</Link>
-              <a href={`mailto:${siteContent.contact.email}`}>
+              <Link href="/contact">
                 Contact
-              </a>
+              </Link>
             </nav>
+            <Link className="header-cta" href="/book">
+              Check availability
+            </Link>
           </div>
         </header>
 
@@ -61,12 +74,19 @@ export default function RootLayout({
             <div>
               <h4>Explore</h4>
               <p>
-                <Link href="/news">Latest News & Events</Link>
+                <Link href="/villa">The Villa</Link>
               </p>
               <p>
-                <a href="https://kohrong.co" rel="noreferrer">
-                  Official Island Guide
-                </a>
+                <Link href="/gallery">Photo Stories</Link>
+              </p>
+              <p>
+                <Link href="/news">News & Events</Link>
+              </p>
+              <p>
+                <Link href="/book">Book Your Stay</Link>
+              </p>
+              <p>
+                <Link href="/contact">Contact</Link>
               </p>
             </div>
           </div>

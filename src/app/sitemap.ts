@@ -7,9 +7,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/news/${item.slug}`,
     lastModified: item.createdAt
   }));
+  const staticRoutes = [
+    "",
+    "/villa",
+    "/gallery",
+    "/gallery/koh-rong-first-look",
+    "/gallery/beaches-of-koh-rong",
+    "/gallery/sunset-spots",
+    "/gallery/daily-life",
+    "/gallery/underwater",
+    "/book",
+    "/contact",
+    "/news"
+  ].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date().toISOString()
+  }));
 
   return [
-    { url: baseUrl, lastModified: new Date().toISOString() },
+    ...staticRoutes,
     ...newsRoutes
   ];
 }
